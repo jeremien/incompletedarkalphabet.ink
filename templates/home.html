@@ -2,6 +2,17 @@
 
 {% block content %}
 
-  
+  {% for key, image in images %}
+
+      <h1>{{key}}</h1>
+
+      {% for sub in image %}
+
+        <img src="images/{{key}}/{{ sub }}" />
+
+      {% endfor %}
+
+  {% endfor %}
+
 
 {% endblock %}
