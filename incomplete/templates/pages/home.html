@@ -1,9 +1,17 @@
 {% extends 'base.html' %}
 
-
-
 {% block content %}
 
-  <p>image</p>
+  {% for key in data %}
+
+    <h1>{{ key.name }}</h1>
+
+    {% for image in key.files %}
+
+      <p>{{ image.name }}</p>
+
+    {% endfor %}
+
+  {% endfor %}
 
 {% endblock content %}
