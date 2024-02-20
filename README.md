@@ -1,4 +1,4 @@
-# Pour démarrer
+# Pour démarrer
 
 `python -m venv venv`
 
@@ -6,5 +6,5 @@
 
 `pip install -r requirements.txt`
 
-̀python -m flask --app incomplete run --port 8000 --debug`
+`python -m flask --app incomplete run --port 8000 --debug`
 
