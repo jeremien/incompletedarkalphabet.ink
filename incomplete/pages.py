@@ -1,4 +1,6 @@
-import os, pathlib, logging
+import os
+import pathlib
+import logging
 import glob
 from typing import List, Dict
 import pwd
@@ -8,10 +10,11 @@ from flask import Blueprint, render_template
 bp = Blueprint("pages", __name__)
 LOG = logging.getLogger(__name__)
 
-# constantes
+# constantes
 CURRENT_PATH = pathlib.Path().resolve()
 PATH = str(CURRENT_PATH) + '/incomplete/static/images'
 # LIST_DIR = os.listdir(PATH)
+
 
 @bp.route("/")
 def home():
@@ -20,9 +23,10 @@ def home():
 
     data = directory_contents(PATH)
 
-    return render_template("pages/home.html", data = data['data'])
+    return render_template("pages/home.html", data=data['data'])
 
 # ajouter la date de modification, l'extension
+
 
 def get_files_contents(path: str) -> List:
     """Returns sub directory contents
@@ -38,10 +42,8 @@ def get_files_contents(path: str) -> List:
 
     for file in files:
 
-        file_attr = {}
-        file_attr['name'] = os.path.basename(file)
+        file_attr = {'name': os.path.basename(file), 'size': '{} kb'.format(round(os.path.getsize(file) / 1028))}
         # size in kilobytes
-        file_attr['size'] = '{} kb'.format(round(os.path.getsize(file) / 1028))
         if os.path.isfile(file):
             file_attr['type'] = 'file'
         else:
@@ -49,6 +51,7 @@ def get_files_contents(path: str) -> List:
         images.append(file_attr)
 
     return images
+
 
 def directory_contents(path: str) -> Dict:
     """Returns root directory contents
@@ -58,13 +61,13 @@ def directory_contents(path: str) -> Dict:
     Args:
         path (str): directory path
     """
-    root_files = { 'data' : [] }
-    directory = os.listdir(path)
+    root_files = {'data': []}
+    directories = os.listdir(path)
     # print(files)
-    for dir in directory:
+    for directory in directories:
 
         file_attr = {}
-        file_path = '{}/{}'.format(path, dir)
+        file_path = '{}/{}'.format(path, directory)
         file_attr['name'] = os.path.basename(file_path)
         # size in kilobytes
         file_attr['size'] = '{} kb'.format(round(os.path.getsize(file_path) / 1028))
@@ -77,14 +80,16 @@ def directory_contents(path: str) -> Dict:
     # bd.logger.debug(json_body)
     return root_files
 
+
 def get_owner(path):
     """Get owner of file or directory
 
     Args:
         path (str): file path
     """
-    stat = os.stat(path)
-    return pwd.getpwuid(stat.st_uid)[0]
+    information = os.stat(path)
+    return pwd.getpwuid(information.st_uid)[0]
+
 
 def get_permissions(path):
     """Get permission of file or directory in octal

@@ -8,7 +8,7 @@
 
     {% for image in key.files %}
 
-      <p>{{ image.name }}</p>
+      <p><img src="{{ url_for('static', filename='images/' + key.name + '/' + image.name ) }}" /></p>
 
     {% endfor %}
 
