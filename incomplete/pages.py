@@ -2,13 +2,20 @@ import os
 import pathlib
 import logging
 import glob
+import time
+from datetime import datetime
 from typing import List, Dict
 import pwd
 import stat
 from flask import Blueprint, render_template
 
-bp = Blueprint("pages", __name__)
+bp = Blueprint("pages", __name__, template_folder='templates')
 LOG = logging.getLogger(__name__)
+
+@bp.app_template_filter()
+def unix_to_date(unix_time):
+    date = datetime.fromtimestamp(unix_time)
+    return date.strftime("%d/%m/%Y")
 
 # constantes
 CURRENT_PATH = pathlib.Path().resolve()
@@ -19,7 +26,7 @@ PATH = str(CURRENT_PATH) + '/incomplete/static/images'
 @bp.route("/")
 def home():
 
-    # LOG.debug(directory_contents(PATH))
+    LOG.debug(directory_contents(PATH))
 
     data = directory_contents(PATH)
 
@@ -42,7 +49,11 @@ def get_files_contents(path: str) -> List:
 
     for file in files:
 
-        file_attr = {'name': os.path.basename(file), 'size': '{} kb'.format(round(os.path.getsize(file) / 1028))}
+        file_attr = {
+            'name': os.path.basename(file),
+            'date': os.path.getmtime(file),
+            'size': '{} kb'.format(round(os.path.getsize(file) / 1028))
+        }
         # size in kilobytes
         if os.path.isfile(file):
             file_attr['type'] = 'file'
@@ -65,7 +76,6 @@ def directory_contents(path: str) -> Dict:
     directories = os.listdir(path)
     # print(files)
     for directory in directories:
-
         file_attr = {}
         file_path = '{}/{}'.format(path, directory)
         file_attr['name'] = os.path.basename(file_path)
@@ -77,7 +87,6 @@ def directory_contents(path: str) -> Dict:
         else:
             file_attr['type'] = 'dir'
         root_files['data'].append(file_attr)
-    # bd.logger.debug(json_body)
     return root_files
 
 

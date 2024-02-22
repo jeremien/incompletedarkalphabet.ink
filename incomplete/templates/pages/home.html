@@ -4,11 +4,18 @@
 
   {% for key in data %}
 
-    <h1>{{ key.name }}</h1>
+    <h1>{{ key.name|capitalize }} ({{ key.files|length }} images)</h1>
 
     {% for image in key.files %}
 
-      <p><img src="{{ url_for('static', filename='images/' + key.name + '/' + image.name ) }}" /></p>
+      <figure>
+        <img src="{{ url_for('static', filename='images/' + key.name + '/' + image.name ) }}" />
+        <figcaption>
+          {{ image.name }}
+          {{ image.date | unix_to_date }}
+          {{ image.size }}
+        </figcaption>
+      </figure>
 
     {% endfor %}
 
