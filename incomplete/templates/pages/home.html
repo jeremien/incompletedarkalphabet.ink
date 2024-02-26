@@ -1,23 +1,34 @@
 {% extends 'base.html' %}
 
+{% include 'snippets/head.html' %}
+
 {% block content %}
 
   {% for key in data %}
 
-    <h1>{{ key.name|capitalize }} ({{ key.files|length }} images)</h1>
+    <article class="chapitre">
+
 
     {% for image in key.files %}
 
-      <figure>
-        <img src="{{ url_for('static', filename='images/' + key.name + '/' + image.name ) }}" />
+      <figure class="page">
+        <img
+          data-src="{{ url_for('static', filename='images/' + key.name + '/' + image.name ) }}"
+          alt="{{ image.name }}, {{ image.date | unix_to_date }}"
+          class="lazyload"
+        />
         <figcaption>
-          {{ image.name }}
-          {{ image.date | unix_to_date }}
-          {{ image.size }}
+          <span>{{ image.name }}</span>
+          <span>{{ image.date | unix_to_date }}</span>
+          <span>{{ image.size }}kb</span>
         </figcaption>
       </figure>
 
     {% endfor %}
+
+    <h1>{{ key.name|capitalize }} ({{ key.files|length }} images)</h1>
+
+  </article>
 
   {% endfor %}
 

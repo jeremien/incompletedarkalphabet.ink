@@ -52,7 +52,7 @@ def get_files_contents(path: str) -> List:
         file_attr = {
             'name': os.path.basename(file),
             'date': os.path.getmtime(file),
-            'size': '{} kb'.format(round(os.path.getsize(file) / 1028))
+            'size': '{}'.format(round(os.path.getsize(file) / 1028))
         }
         # size in kilobytes
         if os.path.isfile(file):
