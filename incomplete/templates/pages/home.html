@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 
 {% include 'snippets/head.html' %}
+{% include 'snippets/navigation.html' %}
 
 {% block content %}
 
   {% for key in data %}
 
-    <article class="chapitre">
+    <article class="chapitre" data-title="{{ key.name }}" id="{{ key.name }}">
 
 
     {% for image in key.files %}
@@ -26,7 +27,7 @@
 
     {% endfor %}
 
-    <h1>{{ key.name|capitalize }} ({{ key.files|length }} images)</h1>
+    <h1 class="chapitre-title">{{ key.name }}</h1>
 
   </article>
 

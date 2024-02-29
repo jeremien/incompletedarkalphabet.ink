@@ -26,9 +26,12 @@ PATH = str(CURRENT_PATH) + '/incomplete/static/images'
 @bp.route("/")
 def home():
 
-    LOG.debug(directory_contents(PATH))
 
     data = directory_contents(PATH)
+
+    # total = { 'images': 505 }
+
+    # LOG.debug(total)
 
     return render_template("pages/home.html", data=data['data'])
 

@@ -28,5 +28,20 @@ nouvelle couverture *blow blow thou winter wind*
 caractères Monospace 821BT dessiné par Max Medinger et Baskervville de l'ANRT
 Mise à jour des images
 
+1.3
+Ajout d'une catégorie *Maison*
+Mise à jour des images
+Nouvelle citation
+Nouvel auteur *Annie Wilkes*
+
+1.4
+modification de la couverture *nouvelles images*
+modification du corps typographique pour Baskervville (texte courant)
+Nouvelle couverture
+ajout d'un chapitre Maison
+
 2.0
 page web qui génère le livre
+nouveaux caractères > [Commit Mono](https://commitmono.com/) de Eigil Nikolajsen et [Adelphe](https://typotheque.genderfluid.space/adelphe.html) d'Eugénie Bidaut.
+Nouvelle couverture
+Ajout d'un chapitre Or
