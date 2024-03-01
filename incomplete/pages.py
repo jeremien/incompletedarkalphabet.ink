@@ -26,16 +26,43 @@ PATH = str(CURRENT_PATH) + '/incomplete/static/images'
 @bp.route("/")
 def home():
 
-
     data = directory_contents(PATH)
 
-    # total = { 'images': 505 }
+    total_bytes = get_dir_size(PATH)
+    total_mb = round((total_bytes / 1024) / 1024)
+    total_files = get_num_files(PATH)
 
-    # LOG.debug(total)
+    total_data = { 'mb': total_mb, 'files': total_files }
+    #LOG.debug(total_files)
 
-    return render_template("pages/home.html", data=data['data'])
+    return render_template("pages/home.html",
+                           data=data['data'],
+                           total=total_data
+                           )
 
 # ajouter la date de modification, l'extension
+
+
+def get_num_files(path: str) -> int:
+    count = 0
+    for root_dir, cur_dir, files in os.walk(path):
+        count += len(files)
+    return count
+
+
+def get_dir_size(path: str) -> int:
+    """Returns directory size in bytes
+        Args:
+            path (str): path
+        """
+    total = 0
+    with os.scandir(path) as it:
+        for entry in it:
+            if entry.is_file():
+                total += entry.stat().st_size
+            elif entry.is_dir():
+                total += get_dir_size(entry.path)
+    return total
 
 
 def get_files_contents(path: str) -> List:
@@ -55,7 +82,7 @@ def get_files_contents(path: str) -> List:
         file_attr = {
             'name': os.path.basename(file),
             'date': os.path.getmtime(file),
-            'size': '{}'.format(round(os.path.getsize(file) / 1028))
+            'size': '{}'.format(round(os.path.getsize(file) / 1024))
         }
         # size in kilobytes
         if os.path.isfile(file):

@@ -7,7 +7,7 @@
   --second-font-size: 2rem;
   --main-color: blue;
   --second-color: red;
-  --third-color: green;
+  --third-color: #2fbf0c;
 
   /* mobile */
   --mobile-font-size: 20px;
@@ -28,7 +28,8 @@ body {
 }
 
 section {
-  margin: var(--main-margin);
+    /*position:relative;*/
+    margin: var(--main-margin);
 }
 
 .navigation {
@@ -60,6 +61,15 @@ section {
 .navigation .right {
   padding: 0 10px 0 0;
   list-style: none;
+}
+
+.show_data {
+    font-family: var(--second-font);
+    font-size: var(--second-font-size);
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    margin: 0 0 10px 10px;
 }
 
 .chapitre {
