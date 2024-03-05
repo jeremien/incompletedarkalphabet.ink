@@ -63,6 +63,11 @@ section {
   list-style: none;
 }
 
+/* .navigation .right li {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+} */
+
 .show_data {
     font-family: var(--second-font);
     font-size: var(--second-font-size);
@@ -70,6 +75,11 @@ section {
     bottom: 0;
     z-index: 3;
     margin: 0 0 10px 10px;
+}
+
+.show_data p {
+  margin: 0;
+  padding: 0;
 }
 
 .chapitre {
@@ -97,7 +107,7 @@ section {
 .chapitre .page figcaption {
   display: flex;
   justify-content: space-around;
-  color: var(--third-color);
+  color: var(--main-color);
 }
 
 

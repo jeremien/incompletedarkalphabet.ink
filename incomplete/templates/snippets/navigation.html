@@ -1,12 +1,17 @@
 <body>
 
   <nav class="navigation">
-      <div class="left"><a href="/">incomplete dark alphabet</a></div>
-      <div class="right"></div>
+      <div class="left"><a href="/">Incomplete Dark Alphabet</a></div>
+      <div class="right">
+          {% for key in data %}
+
+            <a href="#{{key.name}}">{{ key.name|capitalize}}</a>
+
+          {% endfor %}
+      </div>
   </nav>
 
   <div class="show_data">
-    <p>images: {{ total.files }}</p>
-    <p>total: {{ total.mb }} mb</p>
+    <p>Images: {{ total.files }}, Size: {{ total.size }} px, Type: {{ total.type }}, Weight: {{ total.mb }} mb</p>
   </div>
   <section>
