@@ -45,3 +45,4 @@ page web qui génère le livre
 nouveaux caractères > [Commit Mono](https://commitmono.com/) de Eigil Nikolajsen et [Adelphe](https://typotheque.genderfluid.space/adelphe.html) d'Eugénie Bidaut.
 Nouvelle couverture
 Ajout d'un chapitre Or
+Les images sont converties en webp
