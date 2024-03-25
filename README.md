@@ -13,3 +13,5 @@
 `gunicorn --bind 0.0.0.0:5000 'incomplete:create_app()'`
 
 `ps aux|grep gunicorn`
+
+kill -9 pid

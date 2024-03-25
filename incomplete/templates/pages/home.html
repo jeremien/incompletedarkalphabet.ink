@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
-
 {% include 'snippets/head.html' %}
 {% include 'snippets/navigation.html' %}
 
 {% block content %}
-
+<section class="home">
+  
   {% for key in data %}
 
     <article class="chapitre" data-title="{{ key.name }}" id="{{ key.name }}">
@@ -33,5 +33,6 @@
   </article>
 
   {% endfor %}
-
+{% include 'snippets/data.html' %}
+</section>
 {% endblock content %}

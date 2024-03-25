@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% include 'snippets/head.html' %}
+{% include 'snippets/navigation.html' %}
+
+{% block content %}
+<section class="information">
+  {{ data.html|safe }}
+</section>
+{% endblock content %}

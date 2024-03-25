@@ -1,0 +1,167 @@
+@media print {
+
+  @page {
+      size : 108mm 175mm;
+      margin: 20mm;
+      /* marks: crop; */
+      bleed: 3.18mm;
+  }
+
+  @page:first {
+    margin-left: 15mm;
+    margin-right: 15mm;
+    margin-top: 20mm;
+    margin-bottom: 30mm;
+
+  }
+
+  @page:right {
+    margin-left: 15mm;
+    margin-right: 15mm;
+    margin-top: 20mm;
+    margin-bottom: 30mm;
+
+    @bottom-center {
+      content: counter(page);
+      font-family: 'Theinhardt';
+      font-size: 11pt;
+      font-weight: bold;
+      height: 30mm;
+    }
+
+
+  }
+
+  @page:left {
+
+    margin-left: 15mm;
+    margin-right: 15mm;
+    margin-top: 20mm;
+    margin-bottom: 30mm;
+
+
+    @bottom-center {
+      content: element(chapterRunning);
+      font-family: 'Theinhardt';
+      font-size: 11pt;
+      font-weight: bold;
+      height: 30mm;
+    }
+
+  }
+
+  @page:blank {
+    margin-left: 15mm;
+    margin-right: 15mm;
+    margin-top: 20mm;
+    margin-bottom: 30mm;
+
+    @bottom-center {
+      content: none;
+    }
+  }
+
+  @page faux-titre {
+    margin-left: 15mm;
+    margin-right: 15mm;
+    margin-top: 15mm;
+    margin-bottom: 30mm;
+
+    @bottom-center{
+      content: none;
+    }
+  }
+
+
+  * {
+      font-family: 'CommitMono';
+      font-size: 8pt;
+      font-style: normal;
+      font-weight: 400;
+      font-feature-settings: 'ss02' 1;
+      /* font-feature-settings: 'ss01' 1; */
+      font-feature-settings:'kern';
+      text-rendering:optimizeLegibility;
+  }
+
+
+  .info h1, p {
+      padding: 0;
+      margin: 0;
+  }
+
+  .info h1 {
+    font-family: 'CommitMono';
+    font-size: 8pt;
+      margin-top: 3mm;
+  }
+
+  .info p {
+      font-family: "Adelphe Floreal";
+      /* font-feature-settings:'liga', 'ss01', 'onum'; */
+      font-feature-settings: 'ss02' 1;
+      font-size: 9pt;
+      line-height: 12pt;
+      margin-bottom: 3mm;
+      font-weight: 400;
+  }
+
+  .info i {
+      font-family: "Adelphe Floreal";
+      font-feature-settings: 'ss02' 1;
+      font-style: italic;
+      font-size: 8.5pt;
+      line-height: 12pt;
+  }
+
+  .info span {
+      font-size: 9pt;
+      font-family: "Adelphe Floreal";
+      font-feature-settings: 'ss02' 1;
+      font-style: italic;
+      font-weight: 400;
+  }
+
+  .info p > sup {
+    font-size: 7pt;
+    font-family: "Adelphe Floreal";
+    font-feature-settings: 'ss02' 1;
+    font-weight: 400;
+  }
+
+  .title {
+      break-before: page;
+      position: running(titleRunning);
+
+  }
+
+  .chapter {
+      position: running(chapterRunning);
+  }
+
+  .cover {
+      page:faux-titre
+  }
+
+  .blank {
+      page-break-before: always;
+      page-break-after: always;
+  }
+
+  .garde {
+      page: faux-titre;
+      height:  var(--pagedjs-pagebox-height);
+      page-break-after: always;
+  }
+
+  img {
+      margin: 0 auto;
+      width: 100%;
+  }
+
+  .logos {
+    width: 20mm;
+  }
+
+
+}

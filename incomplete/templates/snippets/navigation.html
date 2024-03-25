@@ -1,5 +1,4 @@
 <body>
-
   <nav class="navigation">
       <div class="left"><a href="/">Incomplete Dark Alphabet</a></div>
       <div class="right">
@@ -8,10 +7,8 @@
             <a href="#{{key.name}}">{{ key.name|capitalize}}</a>
 
           {% endfor %}
+          <a href="/about">À propos</a>
+          <a href="/versions">Versions</a>
+          <a href="/book">Livre</a>
       </div>
   </nav>
-
-  <div class="show_data">
-    <p>Images: {{ total.files }}, Size: {{ total.size }} px, Type: {{ total.type }}, Weight: {{ total.mb }} mb</p>
-  </div>
-  <section>

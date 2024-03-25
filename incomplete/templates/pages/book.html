@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% include 'snippets/headbook.html' %}
+
+{% block content %}
+
+<div id="content">
+
+  <section class="cover">
+      <h1>Incomplete Dark Alphabet</h1>
+  </section>
+  <section class="page garde">
+  <div class="info">
+      <p>
+      </p>
+  </div>
+  </section>
+  <section class="page garde">
+      <div class="info">
+      <p>
+      </p>
+      </div>
+  </section>
+  <section class="page garde">
+
+      <div class="info">
+          <p>
+          Yesterday I was dirty<br>
+          Wanted to be pretty<br>
+          I know now that I'm forever dirt
+          </p>
+          <h1>Marilyn Manson,<span>The Nobodies</span>, 2000</h1>
+      </div>
+  </section>
+  <section class="page garde">
+      <div class="info">
+          <h1>Incomplete Dark Alphabet</h1>
+          <p>Grete</p>
+      </div>
+  </section>
+  <section class="page garde">
+      <div class="info">
+          <p>
+          </p>
+      </div>
+  </section>
+  <section class="page garde">
+      <div class="info">
+          <h1>Version 2.0<br>
+          Mars 2024</h1>
+      </div>
+  </section>
+
+  <!-- injecter -->
+
+
+  {% for key in data %}
+
+      <div class="chapter">{{ key.name }}</div>
+
+    {% for image in key.files %}
+
+      <div class="page">
+          <figure id="figure" >
+              <img src="{{ url_for('static', filename='images/' + key.name + '/' + image.name ) }}" />
+          </figure>
+      </div>
+
+    {% endfor %}
+
+  {% endfor %}
+
+    <!-- injecter -->
+
+  <section class="page garde">
+      <div class="info">
+          <p>
+          </p>
+      </div>
+  </section>
+  <section class="page garde">
+  <div class="info">
+  <p>
+      <i>Incomplete Dark Alphabet</i> est une évocation.</p>
+
+      <p><i>L&rsquo;empaleur</i> est le surnom donné au seigneur roumain Vlad III,
+      personnage historique ayant servi de modèle à Bram Stoker pour la création de son personnage Dracula.
+      </p>
+
+      <p><i>Valachie</i> est le nom d&rsquo;une ancienne principauté à l&rsquo;origine de l&rsquo;actuelle Roumanie.
+      Elle fût la principauté de Vlad III.
+      </p>
+      <p><i>Lingchi</i> est le nom d&rsquo;un ancien supplice.<br>
+      Les images de ce châtiment publié au XX<sup>ème</sup> siècle <br> dans <i>Les Larmes d&rsquo;Eros</i> de Bataille ont marqué le lecteur.
+      Elles montrent les spectacles d&rsquo;une douleur mêlée d&rsquo;exaltation.
+      <br>
+      Ces images constituent des documents critiques quant à notre vision et notre fascination pour l’insoutenable et ce qui dépasse notre compréhension.
+      <br>
+      </p>
+
+      <p><i>Les préraphaélites</i> sont un groupe d’artistes anglais, revendiquant une esthétique antérieure aux œuvres de Raphaël.
+      </p>
+
+      <p><i>Mayhem</i> est le premier véritable groupe de black métal européen.
+      Leurs chansons sont faites de références à la mythologie scandinave et empreintes d’une poésie païenne et morbide.
+      <br>Leur renommée est en partie due à des saccages d’églises qui leurs sont attribués, ainsi qu’à une vie de groupe faite de violences et de meurtres présumés.
+      </p>
+
+  </div>
+  </section>
+
+  <section class="page garde">
+      <div class="info">
+          <h1>Auteur</h1>
+          <p>Grete</p>
+
+          <h1>Dessins</h1>
+          <p>Merryl Bouchereau</p>
+
+          <h1>Design</h1>
+          <p>Jérémie Nuel</p>
+
+          <h1>Imprimeur</h1>
+          <p>Lulu Press</p>
+
+          <h1>Caractères</h1>
+          <p>Adelphe Floréal d'Eugénie Bidaut <br> et CommitMono de Eigil Nikolajsen</p>
+
+          <p>Cette édition a reçu le soutien de la région Rhône-Alpes <br> et de la ville de Saint-Étienne</p>
+          <br>
+          <p class="logos"><img src="{{ url_for('static', filename='img/ra.jpg') }}" />
+          <img src="{{ url_for('static', filename='img/saintetienne.png') }}" />
+          </p>
+
+          <h1>&Cross; incompletedarkalphabet.ink</h1>
+          <h1>
+          2024
+          </h1>
+      </div>
+  </section>
+
+</div>
+
+<div id="renderbook"></div>
+
+
+{% endblock content %}

@@ -1,0 +1,46 @@
+@font-face {
+  font-family: Commit-mono;
+  src: url('../../fonts/CommitMonojeremie-550-Regular.otf'), url('../../fonts/CommitMonojeremie-550-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Adelphe;
+  src: url('../../fonts/Adelphe-FructidorItalic.otf'), url('../../fonts/Adelphe-FructidorItalic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Adelphe;
+  src: url('../../fonts/Adelphe-FructidorRegular.otf'), url('../../fonts/Adelphe-FructidorRegular.woff2') format('woff2');
+  font-style: regular;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Chaumont;
+  src: url('../../fonts/ChaumontScript-Regular.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Zainer;
+  src: url('../../fonts/Zainer-Gotico-Antiqua96G.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Junicode;
+  src: url('../../fonts/junicode-italiccondensed-webfont.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Junicode;
+  src: url('../../fonts/junicode-regularcondensed-webfont.woff2') format('woff2');
+  font-style: regular;
+  font-weight: 400;
+}
