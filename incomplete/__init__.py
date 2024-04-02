@@ -1,4 +1,6 @@
 from flask import Flask
-from incomplete import routes
 
 app = Flask(__name__)
+
+from incomplete import routes
+from incomplete import cli
