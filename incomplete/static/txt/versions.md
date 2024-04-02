@@ -49,3 +49,6 @@
 
 # 2.1
 - Nouveaux caractères (web) > [Junicode Condensed](https://github.com/Fromager/junicode/tree/master/fonts) de Peter S. Baker. modifiée par Florian Fromager 
+
+# 2.2
+- Ajout d'une commande process dans flask pour normer les images depuis un dossier src
