@@ -20,6 +20,11 @@ CURRENT_PATH = pathlib.Path().resolve()
 IMAGE_PATH = str(CURRENT_PATH) + '/incomplete/static/images'
 TXT_PATH = str(CURRENT_PATH) + '/incomplete/static/txt/'
 
+@bp.cli.command('test')
+def test():
+    print('test')
+
+
 @bp.app_template_filter()
 def unix_to_date(unix_time):
 

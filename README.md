@@ -1,3 +1,4 @@
+
 # Pour démarrer
 
 `python -m venv venv`
@@ -15,3 +16,6 @@
 `ps aux|grep gunicorn`
 
 kill -9 pid
+
+dev
+install package npm

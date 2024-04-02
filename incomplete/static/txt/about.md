@@ -18,24 +18,28 @@ Ces images constituent des documents critiques quant à notre vision et notre fa
 Leurs chansons sont faites de références à la mythologie scandinave et empreintes d’une poésie païenne et morbide.
 Leur renommée est en partie due à des saccages d’églises qui leur sont attribués, ainsi qu’à une vie de groupe faite de violences et de meurtres présumés.
 
-Dessins: Merryl Bouchereau
+Dessins/textes: [Merryl Bouchereau](https://merrylbouchereaucom.wordpress.com/)
 
-Design/code: Jérémie Nuel
+Design/code: [Jérémie Nuel](https://jeremienuel.fr)
 
 Imprimeur: Lulu Press
 
 Caractères:
 
-(livre) [Adelphe Floréal d'Eugénie Bidaut](http://eugéniebidaut.eu/adelphe/) et [CommitMono de Eigil Nikolajsen](https://commitmono.com/)
+[Adelphe Floréal d'Eugénie Bidaut](http://eugéniebidaut.eu/adelphe/)
 
-(web) [Junicode Condensed](https://github.com/Fromager/junicode/tree/master/fonts) de Peter S. Baker. modifiée par Florian Fromager
+[CommitMono de Eigil Nikolajsen](https://commitmono.com/)
+
+[Junicode Condensed](https://github.com/Fromager/junicode/tree/master/fonts) de Peter S. Baker. modifiée par Florian Fromager
 
 Sources:
 
-(ancien) [Livre](https://forge.jeremienuel.fr/jeremie/incompletdarkalphabet.book)
+[Web/Livre](https://github.com/jeremien/incompletedarkalphabet.ink)
+
+(archive) [Livre](https://forge.jeremienuel.fr/jeremie/incompletdarkalphabet.book)
 
 (ancien) [Scripts](https://forge.jeremienuel.fr/jeremie/incompletdarkalphabet.scripts)
 
-(ancien) [Web](https://forge.jeremienuel.fr/jeremie/incompletdarkalphabet.scripts)
 
-(nouveau)[Web/Livre](https://github.com/jeremien/incompletedarkalphabet.ink)
+
+
