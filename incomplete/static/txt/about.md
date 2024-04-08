@@ -18,9 +18,9 @@ Ces images constituent des documents critiques quant à notre vision et notre fa
 Leurs chansons sont faites de références à la mythologie scandinave et empreintes d’une poésie païenne et morbide.
 Leur renommée est en partie due à des saccages d’églises qui leur sont attribués, ainsi qu’à une vie de groupe faite de violences et de meurtres présumés.
 
-Dessins: Merryl Bouchereau
+Dessins/textes: [Merryl Bouchereau](https://merrylbouchereaucom.wordpress.com/)
 
-Design/code: Jérémie Nuel
+Design/code: [Jérémie Nuel](https://jeremienuel.fr)
 
 Imprimeur: Lulu Press
 

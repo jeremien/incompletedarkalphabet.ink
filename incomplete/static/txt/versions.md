@@ -38,17 +38,17 @@
 - Modification de la couverture *nouvelles images*
 - Modification du corps typographique pour Baskervville (texte courant)
 - Nouvelle couverture
-- Ajout d'un chapitre Maison
 
 # 2.0 <em>tirage</em>
 - Page web qui génère le livre / outil basé sur Flask et paged.js
 - Nouveaux caractères > [Commit Mono](https://commitmono.com/) de Eigil Nikolajsen et [Adelphe](https://typotheque.genderfluid.space/adelphe.html) d'Eugénie Bidaut.
 - Nouvelle couverture
-- Ajout d'un chapitre Or
+- Ajout d'un chapitre *Or*
 - Les images sont converties en webp
 
-# 2.1
+# 2.1
 - Nouveaux caractères (web) > [Junicode Condensed](https://github.com/Fromager/junicode/tree/master/fonts) de Peter S. Baker. modifiée par Florian Fromager
+- Ajout de la partie 'book' > avec le starter kit : https://gitlab.coko.foundation/pagedjs/starter-kits/book-spread_esm
 
-# 2.2
-- Ajout d'une commande process dans flask pour normer les images depuis un dossier src
+# 2.1
+- Nouveaux caractères (web) > [Junicode Condensed](https://github.com/Fromager/junicode/tree/master/fonts) de Peter S. Baker. modifiée par Florian Fromager 

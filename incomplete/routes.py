@@ -182,3 +182,4 @@ def directory_contents(path: str) -> Dict:
             file_attr["type"] = "dir"
         root_files["data"].append(file_attr)
     return root_files
+
