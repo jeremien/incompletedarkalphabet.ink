@@ -26,20 +26,10 @@ Imprimeur: Lulu Press
 
 Caractères:
 
-[Adelphe Floréal d'Eugénie Bidaut](http://eugéniebidaut.eu/adelphe/)
-
-[CommitMono de Eigil Nikolajsen](https://commitmono.com/)
+[Adelphe Floréal d'Eugénie Bidaut](http://eugéniebidaut.eu/adelphe/) et [CommitMono de Eigil Nikolajsen](https://commitmono.com/)
 
 [Junicode Condensed](https://github.com/Fromager/junicode/tree/master/fonts) de Peter S. Baker. modifiée par Florian Fromager
 
 Sources:
 
-[Web/Livre](https://github.com/jeremien/incompletedarkalphabet.ink)
-
-(archive) [Livre](https://forge.jeremienuel.fr/jeremie/incompletdarkalphabet.book)
-
-(ancien) [Scripts](https://forge.jeremienuel.fr/jeremie/incompletdarkalphabet.scripts)
-
-
-
-
+[Github](https://github.com/jeremien/incompletedarkalphabet.ink)

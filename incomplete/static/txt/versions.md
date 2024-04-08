@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-# 0.1 à 0.6
-## tirage
-- Construction d'un système basé sur une application [Flask (python)](https://flask.palletsprojects.com/en/3.0.x/)
-- utilisation de la librairie [paged.js](https://pagedjs.org/)
-=======
-# 0.1 à 0.6 (tirage)
+# 0.1 à 0.6 <em>tirage</em>
 - Construction d'un système basé sur une application flask (python) et la librairie [paged.js](https://pagedjs.org/)
->>>>>>> badb977d461c0ab0357e2c72abf7f90a122435ac
 
 # 0.7
 - Changement d'organisation, suppression des dossiers
@@ -20,11 +13,7 @@
 
 # 0.9
 - Ajout d'un pseudonyme comme auteur
-<<<<<<< HEAD
-- Reconstruction à partir de [cette template](https://gitlab.coko.foundation/pagedjs/pagedjs-book-template)
-=======
 - Reconstruction à partir d'une [template](https://gitlab.coko.foundation/pagedjs/pagedjs-book-template)
->>>>>>> badb977d461c0ab0357e2c72abf7f90a122435ac
 
 # 1.0
 - Script node.js pour générer l'html et le servir
@@ -35,51 +24,31 @@
 - Calcul de la densité noir et blanc des images pour les organiser
 - Nouvelle couverture *blow blow thou winter wind*
 
-<<<<<<< HEAD
-# 1.2
-- Caractères Monospace 821BT dessiné par Max Medinger et [Baskervville de l'ANRT](https://anrt-nancy.fr/fr/fonts/baskervville)
-- Mise à jour des images
-
-# 1.3
-## tirage
-=======
 # 1.2
 - Caractères Monospace 821BT dessiné par Max Medinger et Baskervville de l'ANRT
 - Mise à jour des images
 
 # 1.3
->>>>>>> badb977d461c0ab0357e2c72abf7f90a122435ac
 - Ajout d'une catégorie *Maison*
 - Mise à jour des images
 - Nouvelle citation
 - Nouvel auteur *Annie Wilkes*
 
-<<<<<<< HEAD
-# 1.4 à 1.9
-=======
 # 1.4
->>>>>>> badb977d461c0ab0357e2c72abf7f90a122435ac
 - Modification de la couverture *nouvelles images*
 - Modification du corps typographique pour Baskervville (texte courant)
 - Nouvelle couverture
 
-<<<<<<< HEAD
-# 2.0
-## tirage
-=======
 # 2.0 (tirage)
->>>>>>> badb977d461c0ab0357e2c72abf7f90a122435ac
 - Page web qui génère le livre / outil basé sur Flask et paged.js
 - Nouveaux caractères > [Commit Mono](https://commitmono.com/) de Eigil Nikolajsen et [Adelphe](https://typotheque.genderfluid.space/adelphe.html) d'Eugénie Bidaut.
 - Nouvelle couverture
 - Ajout d'un chapitre *Or*
 - Les images sont converties en webp
 
-<<<<<<< HEAD
 # 2.1
 - Nouveaux caractères (web) > [Junicode Condensed](https://github.com/Fromager/junicode/tree/master/fonts) de Peter S. Baker. modifiée par Florian Fromager
 - Ajout de la partie 'book' > avec le starter kit : https://gitlab.coko.foundation/pagedjs/starter-kits/book-spread_esm
-=======
+
 # 2.1
 - Nouveaux caractères (web) > [Junicode Condensed](https://github.com/Fromager/junicode/tree/master/fonts) de Peter S. Baker. modifiée par Florian Fromager 
->>>>>>> badb977d461c0ab0357e2c72abf7f90a122435ac

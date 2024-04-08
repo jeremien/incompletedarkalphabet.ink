@@ -121,6 +121,14 @@ section {
   margin-top: 20px;
 }
 
+.information h1 em {
+  color: white;
+  background-color: var(--second-color);
+  font-style: normal;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 /* .information p em {
   font-family: var(--third-font);
 } */
