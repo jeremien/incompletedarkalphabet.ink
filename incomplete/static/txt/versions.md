@@ -24,7 +24,7 @@
 - Calcul de la densité noir et blanc des images pour les organiser
 - Nouvelle couverture *blow blow thou winter wind*
 
-# 1.2
+# 1.2 <em>tirage</em>
 - Caractères Monospace 821BT dessiné par Max Medinger et Baskervville de l'ANRT
 - Mise à jour des images
 
@@ -34,12 +34,12 @@
 - Nouvelle citation
 - Nouvel auteur *Annie Wilkes*
 
-# 1.4
+# 1.4 <em>tirage</em>
 - Modification de la couverture *nouvelles images*
 - Modification du corps typographique pour Baskervville (texte courant)
 - Nouvelle couverture
 
-# 2.0 (tirage)
+# 2.0 <em>tirage</em>
 - Page web qui génère le livre / outil basé sur Flask et paged.js
 - Nouveaux caractères > [Commit Mono](https://commitmono.com/) de Eigil Nikolajsen et [Adelphe](https://typotheque.genderfluid.space/adelphe.html) d'Eugénie Bidaut.
 - Nouvelle couverture
