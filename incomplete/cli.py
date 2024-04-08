@@ -18,8 +18,15 @@ BASE_WIDTH = 850
 BASE_HEIGHT = 1386
 
 
+@app.cli.command("clean")
+def clean():
+    pass
+
+
 @app.cli.command("process")
 def process():
+    """
+    """
     files = os.listdir(SOURCE_PATH)
     process_file(files)
 

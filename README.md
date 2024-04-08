@@ -1,14 +1,33 @@
-# Pour démarrer
+# Développement
 
+## Structure de l'application
+
+- dossier avec les images sources
+`../src/`
+
+- dossier avec les images
+`../incomplete/static/assets/images/`
+
+
+## Pour démarrer
+
+- Création d'un environnement python
 `python -m venv venv`
 
+- Activation
 `source venv/bin/activate`
 
+- Installation des dépendances
 `pip install -r requirements.txt`
 
+- Serveur de développement
 `flask run`
 
-`flask process`
-
+- Serveur de production
 `gunicorn --bind 0.0.0.0:5000 wsgi:app`
 
+
+## CLI
+
+- commande pour convertir les images dans *src*
+`flask process`
