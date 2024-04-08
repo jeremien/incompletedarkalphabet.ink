@@ -4,7 +4,7 @@
 
 {% block content %}
 <section class="home">
-  
+
   {% for key in data %}
 
     <article class="chapitre" data-title="{{ key.name }}" id="{{ key.name }}">
@@ -21,7 +21,13 @@
         <figcaption>
           <span>{{ image.name }}</span>
           <span>{{ image.date | unix_to_date }}</span>
-          <span>{{ image.size }}kb</span>
+          <span>
+            {% if image.size|int > 50 %}
+            <div class="red">{{ image.size }}kb</div>
+            {% else %}
+            <div class="green">{{ image.size }}kb</div>
+            {% endif %}
+          </span>
         </figcaption>
       </figure>
 

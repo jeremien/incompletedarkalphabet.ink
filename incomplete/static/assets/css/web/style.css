@@ -34,8 +34,17 @@ section {
     margin: var(--main-margin);
 }
 
+.green {
+  color: var(--third-color);
+}
+
+.red {
+  color: var(--second-color);
+}
+
 .navigation {
   display: flex;
+  flex-direction: row;
   width: 100%;
   align-content: space-between;
     justify-content: space-between;
@@ -72,6 +81,9 @@ section {
     bottom: 0;
     z-index: 3;
     margin: 0 0 10px 10px;
+    padding: 0 5px 0 5px;
+    color: var(--main-color);
+    background-color: var(--third-color);
 }
 
 .show_data p {
@@ -93,7 +105,7 @@ section {
 .chapitre .page {
   width: calc((100% / 6) - 20px);
   border: 1px solid var(--main-color);
-  padding: var(--main-padding);
+  /* padding: var(--main-padding); */
   margin: var(--main-margin);
 }
 
@@ -105,7 +117,24 @@ section {
   display: flex;
   justify-content: space-around;
   color: var(--main-color);
+  /* padding: var(--main-padding); */
+  border-top: solid 1px var(--main-color);
 }
+
+.chapitre .page figcaption span {
+  border-right: solid 1px var(--main-color);
+  /* padding: var(--main-padding); */
+  padding: 0 10px 0 0;
+}
+
+.chapitre .page figcaption span:last-child {
+  border-right: none;
+}
+
+/* .chapitre .page figcaption span em {
+  color: var(--third-color);
+  font-style: normal;
+} */
 
 .information {
   font-family: var(--second-font);
@@ -141,6 +170,16 @@ section {
     margin: 5px;
   }
 
+  .navigation {
+    flex-direction: column;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .navigation .left,.right {
+    width: 100%;
+  }
+
   .chapitre {
     flex-direction: column;
   }
@@ -163,6 +202,13 @@ section {
 
   .information {
     width: 95%;
+  }
+
+  .show_data {
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0 10px 10px 10px;
+    padding: 5px 5px 10px 10px;
   }
 }
 

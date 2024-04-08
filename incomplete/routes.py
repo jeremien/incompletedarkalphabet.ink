@@ -2,6 +2,7 @@ import pathlib
 import os
 import glob
 import markdown
+import yaml
 
 from datetime import datetime
 from flask import render_template, abort
@@ -16,6 +17,7 @@ Constants
 CURRENT_PATH = pathlib.Path().resolve()
 IMAGE_PATH = str(CURRENT_PATH) + "/incomplete/static/images"
 TXT_PATH = str(CURRENT_PATH) + "/incomplete/static/txt/"
+CONFIG_PATH = str(CURRENT_PATH) + "/incomplete/static/config.yml"
 
 
 @app.template_filter()
@@ -34,6 +36,9 @@ def home():
     Serve images content for the index
     """
 
+    with open(CONFIG_PATH, 'r') as target:
+        config = yaml.safe_load(target)
+
     data = directory_contents(IMAGE_PATH)
 
     total_bytes = get_dir_size(IMAGE_PATH)
@@ -44,7 +49,7 @@ def home():
         "mb": total_mb,
         "files": total_files,
         "type": ".webp",
-        "size": "850x1390",
+        "size": f"{config["size"]["width"]}x{config["size"]["height"]}",
     }
     data["page_title"] = "Index"
     return render_template("pages/home.html", data=data["data"], total=total_data)
@@ -182,4 +187,3 @@ def directory_contents(path: str) -> Dict:
             file_attr["type"] = "dir"
         root_files["data"].append(file_attr)
     return root_files
-

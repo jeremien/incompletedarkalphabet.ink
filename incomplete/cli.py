@@ -1,6 +1,7 @@
 import click
 import os
 import pathlib
+import yaml
 
 from typing import List
 from jaraco import path
@@ -14,8 +15,13 @@ Constants
 CURRENT_PATH = pathlib.Path().resolve()
 SOURCE_PATH = str(CURRENT_PATH) + "/src"
 IMAGE_PATH = str(CURRENT_PATH) + "/incomplete/static/images"
-BASE_WIDTH = 850
-BASE_HEIGHT = 1386
+CONFIG_PATH = str(CURRENT_PATH) + "/incomplete/static/config.yml"
+
+with open(CONFIG_PATH, 'r') as target:
+    config = yaml.safe_load(target)
+
+BASE_WIDTH = config["size"]["width"]
+BASE_HEIGHT = config["size"]["height"]
 
 
 @app.cli.command("clean")
