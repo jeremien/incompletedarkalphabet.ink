@@ -17,7 +17,7 @@ Constants
 CURRENT_PATH = pathlib.Path().resolve()
 IMAGE_PATH = str(CURRENT_PATH) + "/incomplete/static/images"
 TXT_PATH = str(CURRENT_PATH) + "/incomplete/static/txt/"
-CONFIG_PATH = str(CURRENT_PATH) + "/incomplete/static/config.yml"
+CONFIG_PATH = str(CURRENT_PATH) + "/config.yml"
 
 
 @app.template_filter()
@@ -48,8 +48,8 @@ def home():
     total_data = {
         "mb": total_mb,
         "files": total_files,
-        "type": ".webp",
-        "size": f"{config["size"]["width"]}x{config["size"]["height"]}",
+        "type": config["image"]["type"]["extension"],
+        "size": f"{config["image"]["size"]["width"]}x{config["image"]["size"]["height"]}",
     }
     data["page_title"] = "Index"
     return render_template("pages/home.html", data=data["data"], total=total_data)
@@ -80,9 +80,30 @@ def book():
 
     data = directory_contents(IMAGE_PATH)
 
+    with open(CONFIG_PATH, 'r') as target:
+        config = yaml.safe_load(target)
+
+    data["config"] = config
+
+    os.chdir(TXT_PATH)
+    text_files = glob.glob('*.md')
+    text = ''
+    for file in text_files:
+        with open(f"{TXT_PATH}{file}", "r") as f:
+            text += f'<section class="page garde"><div class="info">{markdown.markdown(f.read())}</div></section>'
+
+    data["html"] = text
+
+    # if exists(TXT_PATH + page + ".md"):
+    #     with open(TXT_PATH + page + ".md", "r") as f:
+    #         text = f.read()
+    #         data["html"] = markdown.markdown(text)
+
     return render_template(
         "pages/book.html",
-        data=data["data"],
+        images=data["data"],
+        texts=data["html"],
+        config=data["config"]
     )
 
 

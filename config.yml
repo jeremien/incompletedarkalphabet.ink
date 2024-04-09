@@ -1,0 +1,21 @@
+image:
+  size:
+    width: 850
+    height: 1386
+  type:
+    extension: "webp"
+page:
+  size:
+    width: 108
+    height: 175
+  margin:
+    margin-left: "15"
+    margin-right: "15"
+    margin-top: "20"
+    margin-bottom: "30"
+infos:
+  title: "Incomplete Dark Alphabet"
+  version: 2.2
+  author: "Grete"
+  date: "Avril 2024"
+  introduction: "Yesterday I was dirty Wanted to be pretty I know now that I'm forever dirt (Marilyn Manson,The Nobodies, 2000)"

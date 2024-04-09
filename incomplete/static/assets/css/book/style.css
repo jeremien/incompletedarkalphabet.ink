@@ -93,7 +93,7 @@
   .info h1 {
     font-family: 'CommitMono';
     font-size: 8pt;
-      margin-top: 3mm;
+    /* margin-top: 3mm; */
   }
 
   .info p {
@@ -102,16 +102,23 @@
       font-feature-settings: 'ss02' 1;
       font-size: 9pt;
       line-height: 12pt;
-      margin-bottom: 3mm;
+      margin-bottom: 2mm;
       font-weight: 400;
   }
 
-  .info i {
+  .info em {
       font-family: "Adelphe Floreal";
       font-feature-settings: 'ss02' 1;
       font-style: italic;
       font-size: 8.5pt;
       line-height: 12pt;
+  }
+
+  .info a {
+    font-family: "Adelphe Floreal";
+    font-size: 9pt;
+    text-decoration: none;
+    color: black;
   }
 
   .info span {
@@ -127,6 +134,19 @@
     font-family: "Adelphe Floreal";
     font-feature-settings: 'ss02' 1;
     font-weight: 400;
+  }
+
+  .info ul {
+    margin: 0 0 2mm 0;
+    padding: 0 0 0 0;
+  }
+
+  .info li {
+    font-size: 9pt;
+    font-family: "Adelphe Floreal";
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
   }
 
   .title {

@@ -18,18 +18,25 @@ Ces images constituent des documents critiques quant à notre vision et notre fa
 Leurs chansons sont faites de références à la mythologie scandinave et empreintes d’une poésie païenne et morbide.
 Leur renommée est en partie due à des saccages d’églises qui leur sont attribués, ainsi qu’à une vie de groupe faite de violences et de meurtres présumés.
 
-Dessins/textes: [Merryl Bouchereau](https://merrylbouchereaucom.wordpress.com/)
 
-Design/code: [Jérémie Nuel](https://jeremienuel.fr)
 
-Imprimeur: Lulu Press
+
+
+
+
+
+Dessins et textes: [Merryl Bouchereau](https://merrylbouchereaucom.wordpress.com/)
+
+Design et code: [Jérémie Nuel](https://jeremienuel.fr)
+
+Imprimeur: [Lulu Press](https://www.lulu.com)
 
 Caractères:
-
 [Adelphe Floréal d'Eugénie Bidaut](http://eugéniebidaut.eu/adelphe/) et [CommitMono de Eigil Nikolajsen](https://commitmono.com/)
-
 [Junicode Condensed](https://github.com/Fromager/junicode/tree/master/fonts) de Peter S. Baker. modifiée par Florian Fromager
 
-Sources:
+Licences:
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+[GNU GPL](https://www.gnu.org/licenses/gpl-3.0.txt)
 
-[Github](https://github.com/jeremien/incompletedarkalphabet.ink)
+[Source](https://github.com/jeremien/incompletedarkalphabet.ink)

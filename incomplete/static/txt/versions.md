@@ -48,7 +48,9 @@
 
 # 2.1
 - Nouveaux caractères (web) > [Junicode Condensed](https://github.com/Fromager/junicode/tree/master/fonts) de Peter S. Baker. modifiée par Florian Fromager
-- Ajout de la partie 'book' > avec le starter kit : https://gitlab.coko.foundation/pagedjs/starter-kits/book-spread_esm
+- Ajout de la partie 'book' [Starter kit](https://gitlab.coko.foundation/pagedjs/starter-kits/book-spread_esm)
 
-# 2.1
-- Nouveaux caractères (web) > [Junicode Condensed](https://github.com/Fromager/junicode/tree/master/fonts) de Peter S. Baker. modifiée par Florian Fromager 
+# 2.2
+- Ajout d'une commande 'process' pour convertir les images depuis Flask CLI
+- Ajout d'un fichier config.yml
+- Les textes en markdown dans txt sont ajoutés à la maquette

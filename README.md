@@ -1,11 +1,15 @@
 # Développement
 
+## Configuration
+
+- fichier `config.yml`
+
 ## Structure de l'application
 
-- dossier avec les images sources
+- dossier avec les images d'origine
 `../src/`
 
-- dossier avec les images
+- dossier avec les images de destination
 `../incomplete/static/assets/images/`
 
 

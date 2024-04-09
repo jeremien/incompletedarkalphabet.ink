@@ -6,6 +6,8 @@ import yaml
 from typing import List
 from jaraco import path
 from PIL import Image
+# from progress.bar import ChargingBar
+from progress.spinner import Spinner
 
 from incomplete import app
 
@@ -15,13 +17,13 @@ Constants
 CURRENT_PATH = pathlib.Path().resolve()
 SOURCE_PATH = str(CURRENT_PATH) + "/src"
 IMAGE_PATH = str(CURRENT_PATH) + "/incomplete/static/images"
-CONFIG_PATH = str(CURRENT_PATH) + "/incomplete/static/config.yml"
+CONFIG_PATH = str(CURRENT_PATH) + "/config.yml"
 
 with open(CONFIG_PATH, 'r') as target:
     config = yaml.safe_load(target)
 
-BASE_WIDTH = config["size"]["width"]
-BASE_HEIGHT = config["size"]["height"]
+BASE_WIDTH = config["image"]["size"]["width"]
+BASE_HEIGHT = config["image"]["size"]["height"]
 
 
 @app.cli.command("clean")
@@ -34,7 +36,9 @@ def process():
     """
     """
     files = os.listdir(SOURCE_PATH)
+    click.secho('Starting to convert source images', bg='blue', fg='white')
     process_file(files)
+    click.secho('\nFinishing to convert source images', bg='green', fg='blue')
 
 
 def process_file(list_files: List[str]) -> None:
@@ -46,6 +50,7 @@ def process_file(list_files: List[str]) -> None:
         Array of files in directory
 
     """
+    spinner = Spinner('Processing')
     for f in enumerate(list_files):
 
         src_file = SOURCE_PATH + "/" + f[1]
@@ -57,9 +62,13 @@ def process_file(list_files: List[str]) -> None:
             sub_files = os.listdir(src_file)
 
             if os.path.exists(output_dir):
-                print(output_dir)
+                pass
             else:
                 os.mkdir(output_dir)
+                click.secho(f'\nCreate folder', bg='green', fg='red')
+
+
+            click.secho(f'\nconvert images in {output_dir}', bg='red', fg='white')
 
             for i in enumerate(sub_files):
                 if test_ext(src_file + "/" + i[1]):
@@ -67,8 +76,7 @@ def process_file(list_files: List[str]) -> None:
                     convert_file(
                         src_file + "/" + i[1], output_dir + "/" + str(i[0]) + ".webp"
                     )
-
-    click.echo("*** end ***")
+                spinner.next()
 
 
 def convert_file(src_file: str, dist_file: str) -> None:
@@ -82,8 +90,6 @@ def convert_file(src_file: str, dist_file: str) -> None:
         dist file path
     TODO normalisation des images ?
     """
-
-    click.echo("*** convert and save ***")
 
     img = Image.open(src_file)
 
