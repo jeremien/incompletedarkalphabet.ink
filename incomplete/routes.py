@@ -49,7 +49,7 @@ def home():
         "mb": total_mb,
         "files": total_files,
         "type": config["image"]["type"]["extension"],
-        "size": f"{config["image"]["size"]["width"]}x{config["image"]["size"]["height"]}",
+        "size": f'{config["image"]["size"]["width"]}x{config["image"]["size"]["height"]}',
     }
     data["page_title"] = "Index"
     return render_template("pages/home.html", data=data["data"], total=total_data)
