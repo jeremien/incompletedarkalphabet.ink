@@ -2,6 +2,7 @@
 
   @page {
       size : 108mm 175mm;
+      /* size: var(--page-width) var(--page-height); */
       margin: 20mm;
       /* marks: crop; */
       bleed: 3.18mm;
@@ -84,6 +85,11 @@
       text-rendering:optimizeLegibility;
   }
 
+  .introduction {
+    font-family: "Adelphe Floreal";
+    font-size: 9pt;
+    line-height: 12pt;
+  }
 
   .info h1, p {
       padding: 0;

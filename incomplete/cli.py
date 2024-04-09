@@ -2,11 +2,11 @@ import click
 import os
 import pathlib
 import yaml
+import shutil
 
 from typing import List
 from jaraco import path
 from PIL import Image
-# from progress.bar import ChargingBar
 from progress.spinner import Spinner
 
 from incomplete import app
@@ -28,7 +28,20 @@ BASE_HEIGHT = config["image"]["size"]["height"]
 
 @app.cli.command("clean")
 def clean():
-    pass
+    """
+    """
+    folders = os.listdir(IMAGE_PATH)
+    spinner = Spinner('Processing')
+    click.secho('Starting cleaning destination folder', bg='blue', fg='white')
+    for folder in folders:
+        print(f'{IMAGE_PATH}/{folder}')
+        try:
+            shutil.rmtree(f'{IMAGE_PATH}/{folder}')
+            click.secho(f'\nfolder {IMAGE_PATH}/{folder} deleted', bg='white', fg='red')
+        except:
+            click.secho(f'\nfolder {IMAGE_PATH}/{folder} not deleted', bg='red', fg='white')
+        spinner.next()
+    click.secho('\nDestination folder clean', bg='green', fg='blue')
 
 
 @app.cli.command("process")
@@ -74,7 +87,7 @@ def process_file(list_files: List[str]) -> None:
                 if test_ext(src_file + "/" + i[1]):
                     _, file_ext = os.path.splitext(f[1])
                     convert_file(
-                        src_file + "/" + i[1], output_dir + "/" + str(i[0]) + ".webp"
+                        src_file + "/" + i[1], output_dir + "/" + str(i[0]) + "." + config["image"]["type"]["extension"]
                     )
                 spinner.next()
 
@@ -101,9 +114,13 @@ def convert_file(src_file: str, dist_file: str) -> None:
 
     back_img = img_base.copy()
     back_img.paste(img, (marge_width, marge_height))
-
-    back_img.save(dist_file, "webp", optimize=True, quality=90)
-
+    # TODO: si le format est jpg changer le code ci dessous
+    if config["image"]["type"]["extension"] == 'webp':
+        back_img.save(dist_file, config["image"]["type"]["extension"], optimize=True, quality=90)
+    elif config["image"]["type"]["extension"] == 'jpg':
+        back_img.save(dist_file, "JPEG")
+    else:
+        click.secho(f'\nError with the image format: {config["image"]["type"]["extension"]}', bg='red', fg='white')
 
 def is_hidden(filepath: str) -> bool:
     """
