@@ -1,5 +1,8 @@
 # Développement
 
+## Cloner le dépôt
+`git clone https://github.com/jeremien/incompletedarkalphabet.ink.git`
+
 ## Configuration
 
 - fichier `config.yml`
