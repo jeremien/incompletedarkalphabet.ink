@@ -25,30 +25,30 @@
 - Nouvelle couverture *blow blow thou winter wind*
 
 # 1.2 <em>tirage</em>
-- Caractères Monospace 821BT dessiné par Max Medinger et Baskervville de l'ANRT
+- Caractères Monospace 821BT dessiné par Max Medinger et [Baskervville](https://anrt-nancy.fr/fr/fonts/baskervville) de l'ANRT
 - Mise à jour des images
 
 # 1.3
 - Ajout d'une catégorie *Maison*
 - Mise à jour des images
 - Nouvelle citation
-- Nouvel auteur *Annie Wilkes*
+- Nouvelle auteurice *Annie Wilkes*
 
 # 1.4 <em>tirage</em>
 - Modification de la couverture *nouvelles images*
-- Modification du corps typographique pour Baskervville (texte courant)
+- Modification du corps typographique pour le texte courant 
 - Nouvelle couverture
 
 # 2.0 <em>tirage</em>
-- Page web qui génère le livre / outil basé sur Flask et paged.js
-- Nouveaux caractères > [Commit Mono](https://commitmono.com/) de Eigil Nikolajsen et [Adelphe](https://typotheque.genderfluid.space/adelphe.html) d'Eugénie Bidaut.
+- Page web qui génère le livre et outil basé sur Flask et paged.js
+- Nouveaux caractères : [Commit Mono](https://commitmono.com/) de Eigil Nikolajsen et [Adelphe](https://typotheque.genderfluid.space/adelphe.html) d'Eugénie Bidaut.
 - Nouvelle couverture
 - Ajout d'un chapitre *Or*
 - Les images sont converties en webp
 
-# 2.1
-- Nouveaux caractères (web) > [Junicode Condensed](https://github.com/Fromager/junicode/tree/master/fonts) de Peter S. Baker. modifiée par Florian Fromager
-- Ajout de la partie 'book' [Starter kit](https://gitlab.coko.foundation/pagedjs/starter-kits/book-spread_esm)
+# 2.1
+- Nouveaux caractères (web) : [Junicode Condensed](https://github.com/Fromager/junicode/tree/master/fonts) de Peter S. Baker. modifiée par Florian Fromager
+- Ajout de la partie *book* avec le [Starter kit](https://gitlab.coko.foundation/pagedjs/starter-kits/book-spread_esm)
 
 # 2.2
 - Ajout d'une commande 'process' pour convertir les images depuis Flask CLI
