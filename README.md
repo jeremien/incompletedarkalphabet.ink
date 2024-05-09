@@ -33,11 +33,16 @@
 - Serveur de production
 `gunicorn --bind 0.0.0.0:5000 wsgi:app`
 
-
 ## CLI
 
 - commande pour convertir les images dans *src* vers *assets/images*
 `flask process`
+
+# Libraries
+
+- [Flask](https://flask.palletsprojects.com/en/3.0.x/)
+- [Lazysizes.js](https://github.com/aFarkas/lazysizes)
+- [Paged.js](https://gitlab.coko.foundation/pagedjs/)
 
 - commande pour supprimer les images dans *assets/images*
 `flask clean`

@@ -36,7 +36,7 @@ Caractères:
 [Junicode Condensed](https://github.com/Fromager/junicode/tree/master/fonts) de Peter S. Baker. modifiée par Florian Fromager
 
 Licences:
-[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
-[GNU GPL](https://www.gnu.org/licenses/gpl-3.0.txt)
+- Pour les images [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+- Pour le code [GNU GPL](https://www.gnu.org/licenses/gpl-3.0.txt)
 
-[Source](https://github.com/jeremien/incompletedarkalphabet.ink)
+[Sources](https://github.com/jeremien/incompletedarkalphabet.ink)

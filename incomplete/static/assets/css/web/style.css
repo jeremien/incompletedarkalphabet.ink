@@ -124,7 +124,9 @@ section {
 .chapitre .page figcaption span {
   border-right: solid 1px var(--main-color);
   /* padding: var(--main-padding); */
-  padding: 0 10px 0 0;
+  /*padding: 0 10px 0 0;*/
+  width:100%;
+  text-align:center
 }
 
 .chapitre .page figcaption span:last-child {
