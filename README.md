@@ -36,5 +36,17 @@
 
 ## CLI
 
-- commande pour convertir les images dans *src*
+- commande pour convertir les images dans *src* vers *assets/images*
 `flask process`
+
+- commande pour supprimer les images dans *assets/images*
+`flask clean`
+
+## TODO
+
+- config : ajouter partie livre css format/marge
+- config : configuration du traitement des images
+- config : choisir les chemins d'entrée/sortie
+- image : ajouter fonctionnalité pour contraste
+- image : fonctionnalité détourage
+- bug: choix du format jpg ne fonctionne pas
