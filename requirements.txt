@@ -23,3 +23,5 @@ pyflakes==3.2.0
 python-dotenv==1.0.1
 PyYAML==6.0.1
 Werkzeug==3.0.2
+
+Frozen-Flask~=1.0.2
