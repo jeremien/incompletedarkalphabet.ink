@@ -38,14 +38,14 @@
 - commande pour convertir les images dans *src* vers *assets/images*
 `flask process`
 
+- commande pour supprimer les images dans *assets/images*
+`flask clean`
+
 # Libraries
 
 - [Flask](https://flask.palletsprojects.com/en/3.0.x/)
 - [Lazysizes.js](https://github.com/aFarkas/lazysizes)
 - [Paged.js](https://gitlab.coko.foundation/pagedjs/)
-
-- commande pour supprimer les images dans *assets/images*
-`flask clean`
 
 ## TODO
 
@@ -55,3 +55,4 @@
 - image : ajouter fonctionnalité pour contraste
 - image : fonctionnalité détourage
 - bug: choix du format jpg ne fonctionne pas
+- refactoring: améliorer la répartition des fonctions (doublons) entre cli/routes 
